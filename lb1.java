@@ -4,10 +4,10 @@ public class lb1 {
     public static void main(String[] args) {
 
         int par = 6;
-        int[] c = new int[7];
+        int[] a = new int[7];
 
-        for (int i = 0; i < c.length; i++) {
-            c[i] = par;
+        for (int i = 0; i < a.length; i++) {
+            a[i] = par;
             par += 2;
         }
 
@@ -23,12 +23,12 @@ public class lb1 {
 
         double[][] t = new double[7][13];
 
-        for (int i = 0; i < c.length; i++) {
+        for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < x.length; j++) {
                 double X = x[j];
-                if (c[i] == 12) {
+                if (a[i] == 12) {
                     t[i][j] = Math.log(Math.pow(Math.sin(Math.tan(Math.pow(X,1./3.))),2));
-                } else if (c[i] == 8 | c[i] == 14 | c[i] == 18) {
+                } else if (a[i] == 8 | a[i] == 14 | a[i] == 18) {
                     t[i][j] = Math.log(Math.pow(((Math.pow(Math.sin(X),2) + 1) / Math.pow((3 / Math.abs(X) ), 2)) , Math.pow((((0.5 / (X + 1) - 3 / 4)) / 0.5),2)));
                 }else{
                     t[i][j] = 1/4 * (Math.pow((Math.tan((Math.pow(X, (1/3)/X)))), ((Math.pow(((1/4)/(X - 1)*(Math.pow(Math.E,X))),Math.sin(X))) / 2)));
